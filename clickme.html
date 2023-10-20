@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
         <link href="heartcss/main.css" rel="stylesheet">
-
+        <link href="img/favicon.ico" rel="icon">
     </head>
 <body>
 
@@ -22,7 +22,7 @@
     <div class="title" id="my-title" style="display: none;">
         <h3 class="STARDUST1">2023</h3>
         <h1 class="STARDUST2">20 - 10</h1>
-        <h3 class="STARDUST3">R E S I Z E <strong>❤</strong> W I N D O W</h3>
+        <h3 class="STARDUST3">ZOOM <strong>❤</strong> VAO DAY</h3>
         <img class="img" src="img/back-heart-dogs.jpg" alt="CG_NOGARD" />
         <canvas id="pinkboard"></canvas>
     </div>
@@ -34,35 +34,38 @@
     <button id="button5" class="button" style="left: 100px; top: 100px; display: none;">Chán chưa :D </button>
 
     <script>
+
+    
       document.getElementById("button1").addEventListener("click", function() {
         this.style.display = "none";
-        let randomLeft = Math.floor(Math.random() * window.innerWidth);
-        let randomTop = Math.floor(Math.random() * window.innerHeight);
+        let randomLeft = Math.floor(Math.random() * (window.innerWidth - 100));
+        let randomTop = Math.floor(Math.random() * (window.innerHeight - 50));
         document.getElementById("button2").style.left = randomLeft + "px";
         document.getElementById("button2").style.top = randomTop + "px";
         document.getElementById("button2").style.display = "block";
       });
 
+      
       document.getElementById("button2").addEventListener("click", function() {
         this.style.display = "none";
-        let randomLeft = Math.floor(Math.random() * window.innerWidth);
-        let randomTop = Math.floor(Math.random() * window.innerHeight);
+        let randomLeft = Math.floor(Math.random() * (window.innerWidth - 100));
+        let randomTop = Math.floor(Math.random() * (window.innerHeight - 50));
         document.getElementById("button3").style.left = randomLeft + "px";
         document.getElementById("button3").style.top = randomTop + "px";
         document.getElementById("button3").style.display = "block";
       });
       document.getElementById("button3").addEventListener("click", function() {
         this.style.display = "none";
-        let randomLeft = Math.floor(Math.random() * window.innerWidth);
-        let randomTop = Math.floor(Math.random() * window.innerHeight);
+        let randomLeft = Math.floor(Math.random() * (window.innerWidth - 100));
+        let randomTop = Math.floor(Math.random() * (window.innerHeight - 50));
         document.getElementById("button4").style.left = randomLeft + "px";
         document.getElementById("button4").style.top = randomTop + "px";
         document.getElementById("button4").style.display = "block";
       });
       document.getElementById("button4").addEventListener("click", function() {
         this.style.display = "none";
-        let randomLeft = Math.floor(Math.random() * window.innerWidth);
-        let randomTop = Math.floor(Math.random() * window.innerHeight);
+        let randomLeft = Math.floor(Math.random() * (window.innerWidth - 100));
+        let randomTop = Math.floor(Math.random() * (window.innerHeight - 50));
         document.getElementById("button5").style.left = randomLeft + "px";
         document.getElementById("button5").style.top = randomTop + "px";
         document.getElementById("button5").style.display = "block";
