@@ -187,4 +187,4 @@ function createCanvas(properties) {
   };
 }
 
-//update();
+update();
