@@ -100,17 +100,17 @@ canvas {
 
 .STARDUST1 {
   position: relative !important;
-  top: -10px;
+  top: 0px;
 }
 
 .STARDUST2 {
   position: relative !important;
-  top: -10px;
+  top: 20px;
 }
 
 .STARDUST3 {
   position: relative !important;
-  top: -0px;
+  top: 30px;
 }
 
 /* 星空css */
