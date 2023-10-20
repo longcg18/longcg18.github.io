@@ -3,66 +3,87 @@
     <head>
         <meta charset="utf-8">
         <title>Click Me</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
-
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
-
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&300;400;600;700;800&display=swap" rel="stylesheet">
-
-        <!-- Font Awesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+        <link href="heartcss/main.css" rel="stylesheet">
 
     </head>
-
+        <style>
+        .button {
+          position: absolute;
+        }
+        </style>
 <body>
-    <div class="wrapper">
+
+
+
+    <div class="container2" id="my-container" style="display: none;">
         <div class="content">
-            <div class="container p-0">
-                <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
-                    <a href="" class="navbar-brand d-block d-lg-none">Menu</a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav m-auto">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            <a href="snakegame.html" class="nav-item nav-link active">Click Me</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-
-        
+          <canvas id="universe"></canvas>
         </div>
+      </div>
+      <div class="title" id="my-title" style="display: none;">
+        <h3 class="STARDUST1">2023</h3>
+        <h1 class="STARDUST2">20 - 10</h1>
+        <h3 class="STARDUST3">L O V E <strong>❤</strong> Y O U</h3>
+        <img class="img" src="img/back-heart-dogs.jpg" alt="CG_NOGARD" />
+        <canvas id="pinkboard" ></canvas>
     </div>
-    <canvas id="Game" width="1200" height="1200"></canvas>
 
+    <button id="button1" class="button" style="left: 50px; top: 50px;">Bấm vào đây!</button>
+    <button id="button2" class="button" style="left: 100px; top: 100px; display: none;">Nữa nè ahihi </button>
+    <button id="button3" class="button" style="left: 100px; top: 100px; display: none;">Bố m đây con lợn này</button>
+    <button id="button4" class="button" style="left: 100px; top: 100px; display: none;">Làm sao?</button>
+    <button id="button5" class="button" style="left: 100px; top: 100px; display: none;">Chán chưa :D </button>
 
-    <!-- Back to Top -->
-    <!--a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a-->
+    <script>
+      document.getElementById("button1").addEventListener("click", function() {
+        this.style.display = "none";
+        let randomLeft = Math.floor(Math.random() * window.innerWidth);
+        let randomTop = Math.floor(Math.random() * window.innerHeight);
+        document.getElementById("button2").style.left = randomLeft + "px";
+        document.getElementById("button2").style.top = randomTop + "px";
+        document.getElementById("button2").style.display = "block";
+      });
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
+      document.getElementById("button2").addEventListener("click", function() {
+        this.style.display = "none";
+        let randomLeft = Math.floor(Math.random() * window.innerWidth);
+        let randomTop = Math.floor(Math.random() * window.innerHeight);
+        document.getElementById("button3").style.left = randomLeft + "px";
+        document.getElementById("button3").style.top = randomTop + "px";
+        document.getElementById("button3").style.display = "block";
+      });
+      document.getElementById("button3").addEventListener("click", function() {
+        this.style.display = "none";
+        let randomLeft = Math.floor(Math.random() * window.innerWidth);
+        let randomTop = Math.floor(Math.random() * window.innerHeight);
+        document.getElementById("button4").style.left = randomLeft + "px";
+        document.getElementById("button4").style.top = randomTop + "px";
+        document.getElementById("button4").style.display = "block";
+      });
+      document.getElementById("button4").addEventListener("click", function() {
+        this.style.display = "none";
+        let randomLeft = Math.floor(Math.random() * window.innerWidth);
+        let randomTop = Math.floor(Math.random() * window.innerHeight);
+        document.getElementById("button5").style.left = randomLeft + "px";
+        document.getElementById("button5").style.top = randomTop + "px";
+        document.getElementById("button5").style.display = "block";
+      });
+      document.getElementById("button5").addEventListener("click", function() {
+        document.getElementById("my-container").style.display = "";
+        document.getElementById("my-title").style.display = "";
+        document.body.append(c1.canvas);
+        update();
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-    <script src="js/config.js" charset="utf-8"></script>
-    <script src="js/snake.js" charset="utf-8"></script>
-    <script src="js/food.js" charset="utf-8"></script>
-    <script src="js/game.js" charset="utf-8"></script>
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+      });
+    </script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="heartjs/main.js"></script>
+    <script src="heartjs/particle.js"></script>
+    <script src="heartjs/universe.js"></script>
+
 </body>
-
-</html>
