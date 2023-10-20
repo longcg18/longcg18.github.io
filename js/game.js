@@ -1,7 +1,8 @@
 let snake, food;
+const myCanvas = document.getElementById("Game")
 
 function setup() {
-   createCanvas(WITDH, HEIGHT);
+   //createCanvas(WITDH, HEIGHT);
    newGame();
 }
 
