@@ -86,9 +86,33 @@
             if (device.indexOf('windows') > -1) {
                 img.style.marginTop='2%';
                 img.style.maxWidth = '22%';
+
+                no.addEventListener('mouseover', () => {
+
+                const x = Math.floor(Math.random() * (window.innerWidth - 150));
+                const y = Math.floor(Math.random() * (window.innerHeight - 150));
+
+                no.style.left = `${x}px`
+                no.style.top = `${y}px`
+
+                console.log(no.style.left, no.style.top);
+
+                });
             } else {
                 img.style.marginTop='10%';
                 img.style.maxWidth = '80%';
+
+                no.addEventListener('click', () => {
+
+                const x = Math.floor(Math.random() * (window.innerWidth - 150));
+                const y = Math.floor(Math.random() * (window.innerHeight - 150));
+
+                no.style.left = `${x}px`
+                no.style.top = `${y}px`
+
+                console.log(no.style.left, no.style.top);
+
+                });
             }
 
             const love = document.createElement('p');
@@ -100,17 +124,17 @@
             love.style.display='flex';
             //love.style.position='absolute';
 
-            no.addEventListener('click', () => {
+            // no.addEventListener('click', () => {
 
-                const x = Math.floor(Math.random() * (window.innerWidth - 150));
-                const y = Math.floor(Math.random() * (window.innerHeight - 150));
+            //     const x = Math.floor(Math.random() * (window.innerWidth - 150));
+            //     const y = Math.floor(Math.random() * (window.innerHeight - 150));
 
-                no.style.left = `${x}px`
-                no.style.top = `${y}px`
+            //     no.style.left = `${x}px`
+            //     no.style.top = `${y}px`
 
-                console.log(no.style.left, no.style.top);
+            //     console.log(no.style.left, no.style.top);
 
-            });
+            // });
 
             yes.addEventListener('click', () => {
                 main.removeChild(yes);
