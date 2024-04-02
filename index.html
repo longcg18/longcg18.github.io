@@ -53,15 +53,15 @@
                 transition: all 0.3s; 
             }
         </style>
-        <main>
-            <h2 style="font-family: 'Dancing Script';font-size: 50px;">
-                Đẹp trai ko?
+        <main id="main">
+            <h2 style="font-family: 'Dancing Script';font-size: 50px; color: #5B42F3;" id="showtext">
+                Bạn Hoài hãy chấp nhận lời xin lỗiiii
             </h2>
             <div id="yes" class="btn-container">
-                <button type="button" id="yes-btn" class="button-63">Có</button>
+                <button type="button" id="yes-btn" class="button-63">tạm chấp nhận</button>
             </div>
             <div id="no" class="btn-container">
-                <button type="button" id="no-btn" class="button-63">Không</button>
+                <button type="button" id="no-btn" class="button-63">ko thích</button>
             </div>
         </main>
 
@@ -69,7 +69,26 @@
             const yes = document.getElementById('yes');
             const no = document.getElementById('no');
             
+            const img = document.createElement("img");
+            const text = document.getElementById("showtext");
+            const main = document.getElementById("main");
+            img.src = "img/banHoai.jpg";
+            img.style.border = '1px solid #ddd';
+            img.style.maxWidth = '20%';
+            img.style.maxHeight = 'auto';
+            img.alt = "Hoai's photo";
+            img.style.display='block';
+            img.style.marginLeft='auto';
+            img.style.marginRight='auto';
 
+            const love = document.createElement('p');
+            love.innerHTML = 'love u so <3';
+            love.style.fontFamily = 'Dancing Script';
+            love.style.fontSize = '50px';
+            love.style.color = 'pink'
+            love.style.justifyContent='center';
+            love.style.display='flex';
+            //love.style.position='absolute';
 
             no.addEventListener('click', () => {
 
@@ -82,6 +101,16 @@
                 console.log(no.style.left, no.style.top);
 
             });
+
+            yes.addEventListener('click', () => {
+                main.removeChild(yes);
+                main.removeChild(no);
+                main.removeChild(text);
+                main.appendChild(img);
+                main.appendChild(love);
+                //text.innerHTML = "Love u <3";
+                //text.style.alignContent = 'center';
+            })
         </script>
     </body>
 </html>
