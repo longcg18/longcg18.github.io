@@ -76,7 +76,7 @@
             const img = document.createElement("img");
             const text = document.getElementById("showtext");
             const main = document.getElementById("main");
-            img.src = "img/banHoai-minn.JPG";
+            img.src = "img/banHoai-min.JPG";
             img.style.border = '1px solid #ddd';
             img.style.maxHeight = 'auto';
             img.alt = "Hoai's photo";
@@ -84,9 +84,11 @@
             img.style.marginLeft='auto';
             img.style.marginRight='auto';
             if (device.indexOf('windows') > -1) {
-                img.style.maxWidth = '28%';
+                img.style.marginTop='2%';
+                img.style.maxWidth = '22%';
             } else {
-                img.style.maxWidth = '66%';
+                img.style.marginTop='7%';
+                img.style.maxWidth = '70%';
             }
 
             const love = document.createElement('p');
