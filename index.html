@@ -66,6 +66,10 @@
         </main>
 
         <script>
+
+            var device = navigator.userAgent.toLocaleLowerCase();
+            console.log(device);
+
             const yes = document.getElementById('yes');
             const no = document.getElementById('no');
             
@@ -74,12 +78,16 @@
             const main = document.getElementById("main");
             img.src = "img/banHoai-minn.JPG";
             img.style.border = '1px solid #ddd';
-            img.style.maxWidth = '20%';
             img.style.maxHeight = 'auto';
             img.alt = "Hoai's photo";
             img.style.display='block';
             img.style.marginLeft='auto';
             img.style.marginRight='auto';
+            if (device.indexOf('windows') > -1) {
+                img.style.maxWidth = '28%';
+            } else {
+                img.style.maxWidth = '66%';
+            }
 
             const love = document.createElement('p');
             love.innerHTML = 'love u so <3';
