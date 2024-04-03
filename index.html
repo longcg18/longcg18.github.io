@@ -1,150 +1,31 @@
 <html>
-    <head>
-        <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
-    </head>
+    <head></head>
     <body>
-        <style>
-            .btn-container {
-                position: relative; 
-                padding: 10px;
-                width: 60px;
-
-                
-            }
-
-            .button-63 {
-            align-items: center;
-            background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-            border: 0;
-            border-radius: 8px;
-            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-            box-sizing: border-box;
-            color: #FFFFFF;
-            display: flex;
-            font-family: Phantomsans, sans-serif;
-            font-size: 20px;
-            justify-content: center;
-            line-height: 1em;
-            max-width: 100%;
-            min-width: 140px;
-            padding: 19px 24px;
-            text-decoration: none;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            white-space: nowrap;
-            cursor: pointer;
-            }
-
-            .button-63:active,
-            .button-63:hover {
-            outline: 0;
-            }
-
-            @media (min-width: 768px) {
-            .button-63 {
-                font-size: 24px;
-                min-width: 196px;
-            }
-            }
-
-            #no {
-                position: absolute;
-                transition: all 0.3s; 
-            }
-        </style>
         <main id="main">
-            <p style="font-family: 'Dancing Script';font-size: 50px; color: #5B42F3;" id="showtext">
-                Bạn Hoài hãy chấp nhận lời xin lỗiiii
-            </p>
-            <div id="yes" class="btn-container">
-                <button type="button" id="yes-btn" class="button-63">tạm chấp nhận</button>
-            </div>
-            <div id="no" class="btn-container">
-                <button type="button" id="no-btn" class="button-63">ko thích</button>
-            </div>
+
         </main>
-
         <script>
-
             var device = navigator.userAgent.toLocaleLowerCase();
-            console.log(device);
+            const video = document.createElement('video');
+            video.controls = true;
+            video.src = 'video/capcut1.mp4';
+            video.loop = true;
+            video.style.marginLeft = 'auto';
+            video.style.marginRight = 'auto';
 
-            const yes = document.getElementById('yes');
-            const no = document.getElementById('no');
-            
-            const img = document.createElement("img");
-            const text = document.getElementById("showtext");
-            const main = document.getElementById("main");
-            img.src = "img/banHoai-min.JPG";
-            img.style.border = '1px solid #ddd';
-            img.style.maxHeight = 'auto';
-            img.alt = "Hoai's photo";
-            img.style.display='block';
-            img.style.marginLeft='auto';
-            img.style.marginRight='auto';
-            if (device.indexOf('windows') > -1) {
-                img.style.marginTop='2%';
-                img.style.maxWidth = '22%';
-
-                no.addEventListener('mouseover', () => {
-
-                const x = Math.floor(Math.random() * (window.innerWidth - 150));
-                const y = Math.floor(Math.random() * (window.innerHeight - 150));
-
-                no.style.left = `${x}px`
-                no.style.top = `${y}px`
-
-                console.log(no.style.left, no.style.top);
-
-                });
+            video.style.display = 'block';
+            if (device.indexOf('windows')) {
+                video.style.marginTop = '3%';
+                video.style.maxWidth = '27%';
+                video.style.maxHeight = 'auto';
+                
             } else {
-                img.style.marginTop='10%';
-                img.style.maxWidth = '80%';
-
-                no.addEventListener('click', () => {
-
-                const x = Math.floor(Math.random() * (window.innerWidth - 150));
-                const y = Math.floor(Math.random() * (window.innerHeight - 150));
-
-                no.style.left = `${x}px`
-                no.style.top = `${y}px`
-
-                console.log(no.style.left, no.style.top);
-
-                });
+                video.style.marginTop = '2%';
+                video.style.maxWidth = '75%';
             }
 
-            const love = document.createElement('p');
-            love.innerHTML = 'love u so <3';
-            love.style.fontFamily = 'Dancing Script';
-            love.style.fontSize = '50px';
-            love.style.color = 'red'
-            love.style.justifyContent='center';
-            love.style.display='flex';
-            //love.style.position='absolute';
-
-            // no.addEventListener('click', () => {
-
-            //     const x = Math.floor(Math.random() * (window.innerWidth - 150));
-            //     const y = Math.floor(Math.random() * (window.innerHeight - 150));
-
-            //     no.style.left = `${x}px`
-            //     no.style.top = `${y}px`
-
-            //     console.log(no.style.left, no.style.top);
-
-            // });
-
-            yes.addEventListener('click', () => {
-                main.removeChild(yes);
-                main.removeChild(no);
-                main.removeChild(text);
-                main.appendChild(img);
-                main.appendChild(love);
-                //text.innerHTML = "Love u <3";
-                //text.style.alignContent = 'center';
-            })
+            var main = document.getElementById('main');
+            main.appendChild(video);
         </script>
     </body>
 </html>
