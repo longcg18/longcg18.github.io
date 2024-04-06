@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Click Me</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+        <link href="heartcss/main.css" rel="stylesheet">
+        <link href="img/favicon.ico" rel="icon">
+    </head>
+<body>
+
+
+
+    <div class="container2" id="my-container" style="display: none;">
+        <div class="content">
+          <canvas id="universe"></canvas>
+        </div>
+      </div>
+    <div class="title" id="my-title" style="display: none;">
+        <h3 class="STARDUST1">ZUI ZE</h3>
+        <h1 class="STARDUST2">8 - 3</h1>
+        <h3 class="STARDUST3">ZOOM <strong>❤</strong> VAO DAY</h3>
+        <img class="img" src="img/back-heart-dogs.jpg" alt="CG_NOGARD" />
+        <canvas id="pinkboard"></canvas>
+    </div>
+
+    <button id="button1" class="button" style="left: 50px; top: 50px;">Bấm vào đây!</button>
+    <button id="button2" class="button" style="left: 100px; top: 100px; display: none;">Nữa nè ahihi </button>
+    <button id="button3" class="button" style="left: 100px; top: 100px; display: none;">Bố m đây con lợn này</button>
+    <button id="button4" class="button" style="left: 100px; top: 100px; display: none;">Làm sao?</button>
+    <button id="button5" class="button" style="left: 100px; top: 100px; display: none;">Chán chưa :D </button>
+
+    <script>
+
+    
+      document.getElementById("button1").addEventListener("click", function() {
+        this.style.display = "none";
+        let randomLeft = Math.floor(Math.random() * (window.innerWidth - 100));
+        let randomTop = Math.floor(Math.random() * (window.innerHeight - 50));
+        document.getElementById("button2").style.left = randomLeft + "px";
+        document.getElementById("button2").style.top = randomTop + "px";
+        document.getElementById("button2").style.display = "block";
+      });
+
+      
+      document.getElementById("button2").addEventListener("click", function() {
+        this.style.display = "none";
+        let randomLeft = Math.floor(Math.random() * (window.innerWidth - 100));
+        let randomTop = Math.floor(Math.random() * (window.innerHeight - 50));
+        document.getElementById("button3").style.left = randomLeft + "px";
+        document.getElementById("button3").style.top = randomTop + "px";
+        document.getElementById("button3").style.display = "block";
+      });
+      document.getElementById("button3").addEventListener("click", function() {
+        this.style.display = "none";
+        let randomLeft = Math.floor(Math.random() * (window.innerWidth - 100));
+        let randomTop = Math.floor(Math.random() * (window.innerHeight - 50));
+        document.getElementById("button4").style.left = randomLeft + "px";
+        document.getElementById("button4").style.top = randomTop + "px";
+        document.getElementById("button4").style.display = "block";
+      });
+      document.getElementById("button4").addEventListener("click", function() {
+        this.style.display = "none";
+        let randomLeft = Math.floor(Math.random() * (window.innerWidth - 100));
+        let randomTop = Math.floor(Math.random() * (window.innerHeight - 50));
+        document.getElementById("button5").style.left = randomLeft + "px";
+        document.getElementById("button5").style.top = randomTop + "px";
+        document.getElementById("button5").style.display = "block";
+      });
+      document.getElementById("button5").addEventListener("click", function() {
+        
+        document.getElementById("my-container").style.display = "";
+        document.getElementById("my-title").style.display = "";
+        document.body.append(c1.canvas);
+        update();
+
+      });
+    </script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="heartjs/main.js"></script>
+    <script src="heartjs/particle.js"></script>
+    <script src="heartjs/universe.js"></script>
+
+</body>

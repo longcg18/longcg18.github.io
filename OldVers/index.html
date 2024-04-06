@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <main id="main">
+
+        </main>
+        <script>
+            var device = navigator.userAgent.toLocaleLowerCase();
+            const video = document.createElement('video');
+            video.controls = true;
+            video.src = 'video/capcut1.mp4';
+            video.loop = true;
+            video.style.marginLeft = 'auto';
+            video.style.marginRight = 'auto';
+
+            video.style.display = 'block';
+            if (device.indexOf('windows')) {
+                video.style.marginTop = '3%';
+                video.style.maxWidth = '27%';
+                video.style.maxHeight = 'auto';
+                
+            } else {
+                video.style.marginTop = '5%';
+                video.style.maxWidth = '80%';
+            }
+
+            var main = document.getElementById('main');
+            main.appendChild(video);
+        </script>
+    </body>
+</html>
