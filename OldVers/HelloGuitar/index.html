@@ -1,0 +1,43 @@
+<header>
+
+</header>
+<body>
+    <main>
+        <h1>There's nothing here, I just hope you will come back to me</h1>
+        <p id="main"></p>
+        <p>
+            OK - Binz.
+        </p>
+
+    
+    </main>
+
+        
+    <script>
+        var device = navigator.userAgent.toLocaleLowerCase();
+        const video = document.createElement('video');
+        video.controls = true;
+        video.src = 'video/helloworldguitar.mp4';
+        video.loop = true;
+        video.style.marginLeft = 'auto';
+        video.style.marginRight = 'auto';
+    
+        video.style.display = 'block';
+        if (device.indexOf('windows')) {
+            video.style.marginTop = '3%';
+            video.style.maxWidth = '60%';
+            video.style.maxHeight = 'auto';
+            
+        } else {
+            video.style.marginTop = '5%';
+            video.style.maxWidth = '80%';
+        }
+    
+        var main = document.getElementById('main');
+        main.appendChild(video);
+    </script>
+</body>
+
+
+
+<footer style="bottom: 0; display: block; position: absolute;">alright, I still be here and wait for u ...</footer>
